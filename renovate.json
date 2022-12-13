@@ -1,0 +1,18 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "regexManagers": [
+    {
+      "datasourceTemplate": "github-tags",
+      "depNameTemplate": "python/cpython",
+      "description": "Update the default python version in pre-commit config",
+      "extractVersionTemplate": "^v(?<version>\\d+\\.\\d+)",
+      "fileMatch": [
+        "(^|/)\\.pre-commit-config\\.yaml$"
+      ],
+      "matchStrings": [
+        "default_language_version:\\s+python: python(?<currentValue>.+?)\\s"
+      ],
+      "versioningTemplate": "semver-coerced"
+    }
+  ]
+}

@@ -5,7 +5,7 @@
       "datasourceTemplate": "github-tags",
       "depNameTemplate": "python/cpython",
       "description": "Update the default python version in pre-commit config",
-      "extractVersionTemplate": "^v(?<version>\\d+\\.\\d+)",
+      "extractVersionTemplate": "^v(?<version>\\d+\\.\\d+)$",
       "fileMatch": [
         "(^|/)\\.pre-commit-config\\.yaml$"
       ],
